@@ -1,3 +1,8 @@
+<script>
+ window.follow_path = "<%= follow_path(@conn, :index) %>";
+ window.current_user_id = "<%= @current_user.id %>";
+</script>
+
 <h2>Listing Users</h2>
 
 <table class="table">
@@ -5,6 +10,7 @@
     <tr>
       <th>Email</th>
       <th>Name</th>
+      <th>Follow?</th>
 
       <th></th>
     </tr>
@@ -20,6 +26,14 @@
         <span><%= link "Edit", to: user_path(@conn, :edit, user), class: "btn btn-default btn-xs" %></span>
         <span><%= link "Delete", to: user_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
       </td>
+
+      <td>
+       <button class="follow-button btn btn-default"
+               data-user-id="<%= user.id %>"
+               data-follow="<%= @follows[user.id] %>">
+         Follow
+       </button>
+   </td>
     </tr>
 <% end %>
   </tbody>

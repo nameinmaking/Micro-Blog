@@ -14,6 +14,12 @@ defmodule MicroblogWeb.Router do
     plug :accepts, ["json"]
   end
 
+  # Other scopes may use custom stacks.
+  scope "/api/v1", MicroblogWeb do
+    pipe_through :api
+    resources "/follows", FollowController, except: [:new, :edit]
+  end
+
   def get_current_user(conn, _params) do
     # TODO: Move this function out of the router module.
     user_id = get_session(conn, :user_id)
@@ -32,8 +38,5 @@ defmodule MicroblogWeb.Router do
      get "/feed", PageController, :feed
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", MicroblogWeb do
-  #   pipe_through :api
-  # end
+
 end
