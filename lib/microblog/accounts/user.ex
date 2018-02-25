@@ -7,11 +7,6 @@ defmodule Microblog.Accounts.User do
   schema "users" do
     field :email, :string
     field :name, :string
-    # Goal: |> preload(:followers) <- list of followers
-    has_many :follower_follows, Follow, foreign_key: :follower_id
-    has_many :followee_follows, Follow, foreign_key: :followee_id
-    has_many :followers, through: [:followee_follows, :follower]
-    has_many :followees, through: [:follower_follows, :followee]
 
     timestamps()
   end

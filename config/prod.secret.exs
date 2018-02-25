@@ -9,12 +9,12 @@ use Mix.Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
 config :microblog, MicroblogWeb.Endpoint,
-  secret_key_base: "89LEG9AaUbpHL/Q2fydV9j73kv1YIWimM4apijWsEq48DrRuAYuAgFng+dEPbp4e"
+  secret_key_base: "VVZxXgFut1jSrIvKYEIVJeMNkLKYyx6yCnbonoO5opQkv9fKZtxz8Tajem+FeJ1j"
 
 # Configure your database
 config :microblog, Microblog.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "microblog",
-  password: "loox2aem6aiC",
+  password: "eeLei1iu4aip",
   database: "microblog_prod",
   pool_size: 15

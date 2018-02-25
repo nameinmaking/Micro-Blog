@@ -12,7 +12,7 @@ config :microblog,
 # Configures the endpoint
 config :microblog, MicroblogWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "j0koTesHcVrZlGMLcm5fcuu5YYEk90N12zGJW1YqZkiJ9RLnsPVv38y+TlPbZQI7",
+  secret_key_base: "JN4oJEJ61UpS/p4rgHa5AZyp9xsVCtKUvigPGNweb+NEtIl33spWsRFupUXDtkmK",
   render_errors: [view: MicroblogWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Microblog.PubSub,
            adapter: Phoenix.PubSub.PG2]

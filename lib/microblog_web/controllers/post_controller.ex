@@ -5,8 +5,7 @@ defmodule MicroblogWeb.PostController do
   alias Microblog.Social.Post
 
   def index(conn, _params) do
-    # posts = Social.list_posts()
-    posts = Enum.reverse(Microblog.Social.feed_posts_for(conn.assigns[:current_user]))
+    posts = Social.list_posts()
     render(conn, "index.html", posts: posts)
   end
 

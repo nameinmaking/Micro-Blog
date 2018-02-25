@@ -8,15 +8,6 @@ defmodule Microblog.Accounts do
 
   alias Microblog.Accounts.User
 
-
-  # We want a non-bang variant
-  def get_user(id), do: Repo.get(User, id)
-
-  # And we want by-email lookup
-  def get_user_by_email(email) do
-    Repo.get_by(User, email: email)
-  end
-
   @doc """
   Returns the list of users.
 
