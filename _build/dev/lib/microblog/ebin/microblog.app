@@ -20,6 +20,7 @@
                         'Elixir.MicroblogWeb.PostView',
                         'Elixir.MicroblogWeb.Router',
                         'Elixir.MicroblogWeb.Router.Helpers',
+                        'Elixir.MicroblogWeb.SessionController',
                         'Elixir.MicroblogWeb.UserController',
                         'Elixir.MicroblogWeb.UserSocket',
                         'Elixir.MicroblogWeb.UserView']},
